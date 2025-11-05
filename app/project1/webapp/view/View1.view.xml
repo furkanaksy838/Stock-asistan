@@ -1,0 +1,54 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:unified="sap.ui.unified">
+    <tnt:ToolPage id="toolPage" sideExpanded="true">
+                <tnt:header>
+                    <tnt:ToolHeader id="_IDGenToolHeader">
+                        <Button id="_IDGenButton1" icon="sap-icon://menu2" type="Transparent" press=".onToggleSideContent"/>
+                        <Title id="_IDGenTitle" text="Chat UI"/>
+                        <ToolbarSpacer id="_IDGenToolbarSpacer"/>
+                        <Avatar id="_IDGenAvatar" initials="FA"/>
+                    </tnt:ToolHeader>
+                </tnt:header>
+                <tnt:sideContent>
+                    <tnt:SideNavigation id="_IDGenSideNavigation">
+                        <tnt:NavigationList id="_IDGenNavigationList">
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem" text="Dashboard" icon="sap-icon://home" key="dashboard"/>
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Conversations" icon="sap-icon://discussion" key="conversations"/>
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Settings" icon="sap-icon://action-settings" key="settings"/>
+                        </tnt:NavigationList>
+                    </tnt:SideNavigation>
+                </tnt:sideContent>
+                <tnt:mainContents>
+                    <Page id="innerPage" enableScrolling="true">
+                    <VBox id="_IDGenVBox" fitContainer="true" class="sapUiSmallMargin pageOffset">
+                        <List id="msgList" items="{chat>/history}" growing="true" growingScrollToLoad="true" width="100%" class="chatList" showNoData="false">
+                            <CustomListItem id="_IDGenCustomListItem">
+                                <Panel id="_IDGenPanel" class="messagePanel" expandable="true" expanded="true" width="100%">
+                                    <headerToolbar>
+                                        <Toolbar id="_IDGenToolbar">
+                                            <Title id="_IDGenTitle1" level="H6" text="{chat>role}"/>
+                                            <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                                            <Button id="_IDGenButton2" icon="sap-icon://copy" tooltip="Kopyala" type="Transparent" press=".onCopyMessage"/>
+                                        </Toolbar>
+                                    </headerToolbar>
+                                    <content>
+                                        <FormattedText id="_IDGenFormattedText" htmlText="{chat>content}" width="100%" class="chatMessage"/>
+                                    </content>
+                                </Panel>
+                            </CustomListItem>
+                        </List>
+                        <Toolbar id="_IDGenToolbar1" class="sapUiSmallMarginTop composerPill" width="100%" design="Transparent">
+                            <Input id="msgInput" width="100%" placeholder="Ask anything" submit=".onSend"/>
+                        </Toolbar>
+                        <HBox id="_IDGenHBox" class="sapUiSmallMarginTop" justifyContent="Center">
+                            <Button id="_IDGenButton6" text="Gönder" type="Emphasized" press=".onSend"/>
+                        </HBox>
+                        
+                    </VBox>
+                    </Page>
+                </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

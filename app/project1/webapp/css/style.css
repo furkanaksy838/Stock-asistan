@@ -1,0 +1,101 @@
+.messagePanel {
+  max-width: 900px;         
+  width: 100%;
+  margin: 4px auto;           
+  box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
+  .messagePanel { max-width: 100%; }
+}
+.chatList .sapMCustomListItem .sapUiVlt {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.chatList .sapMCustomListItem .sapUiVlt > * {
+  max-width: 100% !important;
+}
+
+.chatList {
+  overflow: visible !important; 
+}
+
+
+.chatList .sapMListUl {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important; 
+}
+
+
+.chatMessage {
+  display: block;
+  max-width: 100%;
+  white-space: pre-wrap !important;       
+  word-break: break-word !important;      
+  overflow-wrap: anywhere !important;     
+  hyphens: auto;                          
+}
+
+
+.chatMessage.sapMFT {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+
+.chatMessage.sapMFT * {
+  max-width: 100% !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+
+.chatList .sapMLIBContent {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible !important; 
+}
+
+.chatList .sapMLIB {
+  overflow: visible; 
+}
+
+/* CustomListItem root container */
+.chatList .sapMCustomListItem {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  box-sizing: border-box;
+}
+
+
+.chatList .sapMText, 
+.chatList .sapMLabel {
+  white-space: normal !important;
+  max-width: 100% !important;
+}
+
+.composerPill {
+  border-radius: 9999px !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  background: #fff !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.04) !important;
+  padding: 6px 10px !important;
+}
+.composerPill .sapMBtn,
+.composerPill .sapMInputBase {
+  background: transparent !important;
+  border: none !important;
+}
+.composerPill .sapMInputBaseContentWrapper {
+  border: none !important;
+  box-shadow: none !important;
+}
+.composerPill .sapMBtnInner {
+  border: none !important;
+  background: transparent !important;
+}

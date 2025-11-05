@@ -1,0 +1,1 @@
+using ai.AIService as service from '../../srv/service';
